@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VarsityFlow</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #1E3A8A;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar .menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        .navbar .menu a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: url('https://source.unsplash.com/1600x900/?sports,training') no-repeat center center/cover;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 22px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .hero .cta-button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #F59E0B;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+
+        .hero .cta-button:hover {
+            background-color: #d97706;
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 50px 20px;
+            background-color: white;
+        }
+
+        .feature-box {
+            background: #1E3A8A;
+            color: white;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .feature-box h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .feature-box p {
+            font-size: 16px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1E3A8A;
+            color: white;
+        }
+
+        /* Gradio Embed */
+        .gradio-embed {
+            height: 800px;
+            width: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">VarsityFlow</div>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Welcome to VarsityFlow</h1>
+        <p>Your ultimate AI-powered assistant for athletes. Get customized fitness, nutrition, and college recommendations!</p>
+        <a href="#" class="cta-button">Get Started</a>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features">
+        <div class="feature-box">
+            <h3>🥗 Nutrition Plans</h3>
+            <p>Customized meal plans to optimize your performance.</p>
+        </div>
+        <div class="feature-box">
+            <h3>💪 Fitness Plans</h3>
+            <p>Personalized workouts to boost your strength & endurance.</p>
+        </div>
+        <div class="feature-box">
+            <h3>🎓 College Fit</h3>
+            <p>Find the best colleges based on your stats & goals.</p>
+        </div>
+    </div>
+
+    <!-- Gradio Embed Section -->
+    <div class="gradio-embed">
+        <!-- Embed your Gradio app's URL (replace with your actual URL) -->
+        <iframe src="https://80e115c782d96bc769.gradio.live/" title="VarsityFlow AI" class="gradio-embed"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 VarsityFlow. All Rights Reserved.</p>
+    </div>
+
+</body>
+</html>
