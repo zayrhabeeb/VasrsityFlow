@@ -3,215 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VarsityFlow - AI for Athletes</title>
+    <title>VarsityFlow - AI Assistant</title>
     <style>
-        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background-color: black;
+            color: white;
+            text-align: center;
         }
 
-        h1, h2 {
-            color: #000;
+        header {
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        h1 span {
+            color: #f39c12; /* Highlight color */
         }
 
         p {
             font-size: 1.2em;
-        }
-
-        /* Welcome Section */
-        .welcome-section {
-            background-color: #000;
-            color: white;
-            text-align: center;
-            padding: 50px;
-            position: relative;
-        }
-
-        .welcome-section h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-
-        .welcome-section p {
-            font-size: 1.5em;
-            margin-bottom: 30px;
-        }
-
-        .get-started-btn {
-            background-color: #ff9900;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            color: white;
-            text-decoration: none;
-        }
-
-        .get-started-btn:hover {
-            background-color: #e68a00;
-        }
-
-        /* Services Section */
-        .services {
-            padding: 50px;
-            text-align: center;
-            background-color: #f9f9f9;
-        }
-
-        .services h2 {
-            font-size: 2.5em;
             margin-bottom: 20px;
         }
 
-        .services p {
-            font-size: 1.2em;
-        }
-
-        /* Contact Modal */
-        .contact-btn {
-            background-color: #007bff;
+        button {
+            background-color: #f39c12;
             color: white;
             padding: 15px 30px;
             font-size: 1.2em;
             border: none;
             cursor: pointer;
-            border-radius: 5px;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
+            transition: 0.3s;
         }
 
-        .contact-btn:hover {
-            background-color: #0056b3;
+        button:hover {
+            background-color: #e67e22;
         }
 
-        /* The Modal (background) */
-        .contact-modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding-top: 60px;
-            overflow: auto;
+        #gradio-section {
+            margin-top: 50px;
         }
 
-        /* Modal Content */
-        .contact-modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
+        iframe {
+            width: 90%;
+            height: 600px;
+            border-radius: 10px;
+        }
+
+        footer {
+            margin-top: 50px;
             padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 500px;
-        }
-
-        /* Close Button */
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        /* Input and Textarea Styling */
-        input[type="text"], input[type="email"], textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        button[type="submit"] {
-            background-color: #28a745;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        button[type="submit"]:hover {
-            background-color: #218838;
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
+            background-color: #222;
         }
     </style>
 </head>
 <body>
-
-    <!-- Welcome Section -->
-    <header class="welcome-section">
-        <h1>Welcome to VarsityFlow</h1>
+    <header>
+        <h1>Welcome to <span>VarsityFlow</span></h1>
         <p>Your ultimate AI-powered assistant for athletes. Get customized fitness, nutrition, and college recommendations!</p>
-        <button class="get-started-btn" onclick="window.location.href='#services'">Get Started</button>
+        <button id="getStarted">Get Started</button>
     </header>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <h2>What VarsityFlow Can Do For You</h2>
-        <p>Get personalized nutrition, fitness, and college fit recommendations based on your athletic profile.</p>
+    <section id="gradio-section">
+        <h2>VarsityFlow AI Assistant</h2>
+        <!-- Replace with your Gradio public link -->
+        <iframe id="gradio-frame" src="https://f8f1bb04c7b2db9c04.gradio.live/" frameborder="0"></iframe>
     </section>
 
-    <!-- Contact Pop-up -->
-    <button class="contact-btn" onclick="openContactForm()">Contact Us</button>
-
-    <div id="contactModal" class="contact-modal">
-        <div class="contact-modal-content">
-            <span class="close" onclick="closeContactForm()">&times;</span>
-            <h2>Contact Us</h2>
-            <form action="#" method="post">
-                <input type="text" id="name" placeholder="Your Name" required><br>
-                <input type="email" id="email" placeholder="Your Email" required><br>
-                <textarea id="message" placeholder="Your Message" required></textarea><br>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p>&copy; 2025 VarsityFlow. All rights reserved.</p>
+    <footer>
+        <p>© 2025 VarsityFlow. All rights reserved.</p>
     </footer>
 
     <script>
-        // Function to open the contact form modal
-        function openContactForm() {
-            document.getElementById("contactModal").style.display = "block";
-        }
-
-        // Function to close the contact form modal
-        function closeContactForm() {
-            document.getElementById("contactModal").style.display = "none";
-        }
-
-        // Close the modal when the user clicks anywhere outside of the modal
-        window.onclick = function(event) {
-            if (event.target == document.getElementById("contactModal")) {
-                closeContactForm();
-            }
-        }
+        document.getElementById("getStarted").addEventListener("click", function() {
+            document.getElementById("gradio-section").scrollIntoView({ behavior: "smooth" });
+        });
     </script>
 </body>
 </html>
